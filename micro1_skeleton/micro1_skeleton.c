@@ -30,8 +30,7 @@ int main()
 
 
  	printf("Cheeze !\r\n");
-	system("raspistill -w 640 -h 480 -t 10 -o image.bmp");
- 	
+	system("libcamera-still --width 640 --height 480 -t 10 -o image.bmp"); 	
  	
  	unsigned char* imgIn = stbi_load("image.bmp", &width, &height, &channel, 3);
 
